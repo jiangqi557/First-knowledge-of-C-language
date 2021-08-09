@@ -1,0 +1,10 @@
+﻿  text.c
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(6,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(6,9): message : 请考虑在格式字符串中使用“%zd”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(7,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(7,9): message : 请考虑在格式字符串中使用“%zd”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(8,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(8,9): message : 请考虑在格式字符串中使用“%zd”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(9,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+H:\First-knowledge-of-C-language\C language\VSproject\text8_9\text8_9\text.c(9,9): message : 请考虑在格式字符串中使用“%zd”
+  text8_9.vcxproj -> H:\First-knowledge-of-C-language\C language\VSproject\text8_9\x64\Debug\text8_9.exe
