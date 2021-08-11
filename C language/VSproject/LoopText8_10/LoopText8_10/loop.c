@@ -3,27 +3,43 @@
 
 int main()
 {
-	int Confirm = 0;
-	int StagingArea = 0;
-	char password[20] = { 0 };
-	printf("请输入密码：>");
-	scanf("%c", password);
-	while ((StagingArea = getchar()) != '\n');
+	//for相对while比较简介添加continue不易死循环
+	int i = 0;
+	while (i <= 10)
 	{
-		;
+		printf("%d.hehe\n", i);
+		i++;
 	}
-	printf("请确认(Y/N):>");
-	Confirm = getchar();
-	if (Confirm == 'Y')
+	for (int a = 0; a <= 10; a++)
 	{
-		printf("确认成功\n");
-	}
-	else
-	{
-		printf("确认失败\n");
+		printf("%d.haha\n", a);
 	}
 	return 0;
 }
+
+//int main()
+//{
+//	int Confirm = 0;
+//	int StagingArea = 0;
+//	char password[20] = { 0 };
+//	printf("请输入密码：>");
+//	scanf("%c", password);
+//	while ((StagingArea = getchar()) != '\n');
+//	{
+//		;
+//	}
+//	printf("请确认(Y/N):>");
+//	Confirm = getchar();
+//	if (Confirm == 'Y')
+//	{
+//		printf("确认成功\n");
+//	}
+//	else
+//	{
+//		printf("确认失败\n");
+//	}
+//	return 0;
+//}
 
 //int main()
 //{
