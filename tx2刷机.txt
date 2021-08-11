@@ -1,0 +1,25 @@
+						TX2镜像刷机整理
+
+1．参考网址：https://blog.csdn.net/zong596568821xp/article/details/80625160
+2．使用材料：TX2原型机  TX2目标机  ubuntu系统电脑  usb线  
+3.  流程1：
+	下载TX2 的ubuntu驱动程序
+https://developer.nvidia.com/embedded/downloads
+选择 driver 下载解压至ubuntu电脑中，参考解压命令
+sudo tar -vxjf Tegra186_Linux_R28.1.0_aarch64.tbz2
+
+4.  tx2 进入boot 模式：将TX2usb线链接至ubuntu系统，长按 recovery 键不松，按住reset键5S后松掉，一致按住recover键，此时开始运行镜像制作脚本。
+5.查看tx2 是否被识别： lsusb 查看usb总线上是否有nvidia的系统
+6.镜像备份制作脚本：
+	sudo ./flash.sh -r -k APP -G /home/casia/Linux_for_Tegra/bootloader/system.img jetson-tx2 mmcblk0p1
+
+此命令是将镜像制作到 bootloader 文件夹下 ，注意确保系统的镜像磁盘中有足够的空间，如果空间不足会导致系统镜像制作失败。保存的文件后缀名为 .img
+
+7.烧录镜像至其他的tx2：
+1.将待烧录的系统镜像复制到tx2 bootloader目录下
+2.tx2进入烧录模式
+3.进入烧录目录
+4.执行烧录命令：
+sudo ./flash.sh -r jetson-tx2 mmcblk0p1
+8.检查烧录完成的系统是否正常启动。
+	
