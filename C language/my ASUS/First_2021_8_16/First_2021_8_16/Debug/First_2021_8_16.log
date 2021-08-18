@@ -1,0 +1,4 @@
+﻿  text.c
+D:\Code\First-knowledge-of-C-language\C language\my ASUS\First_2021_8_16\First_2021_8_16\text.c(26,11): warning C4047: “=”:“int *”与“int”的间接级别不同
+D:\Code\First-knowledge-of-C-language\C language\my ASUS\First_2021_8_16\First_2021_8_16\text.c(28,11): warning C4047: “=”:“int”与“int *”的间接级别不同
+  First_2021_8_16.vcxproj -> D:\Code\First-knowledge-of-C-language\C language\my ASUS\First_2021_8_16\Debug\First_2021_8_16.exe
