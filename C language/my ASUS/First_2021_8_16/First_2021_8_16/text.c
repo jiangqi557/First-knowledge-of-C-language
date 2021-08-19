@@ -1,14 +1,94 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
+//递归求字符串长度，不适用临时变量
+int my_strlen(char* str)
+{
+	if (*str != '\0')
+		return 1 + my_strlen(str + 1);
+	else
+		return 0;
+}
 
 int main()
 {
-	printf("%d", printf("%d", printf("%d", 43)));
+	char arr[] = "bit";
+	int len = my_strlen(arr);
+	printf("len = %d\n", len);
 	return 0;
 }
+
+//函数求字符串长度
+//int my_strlen(char* str)
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	char arr[20] = "bit";
+//	int len = my_strlen(arr);
+//	printf("len = %d\n", len);
+//	return 0;
+//}
+
+//普通求字符串长度
+//#include <string.h>
+//int main()
+//{
+//	char arr[20] = "bit";
+//	int len = strlen(arr);
+//	printf("len = %d\n", len);
+//	return 0;
+//}
+
+//递归
+//void print(int n)
+//{
+//	if (n > 9)
+//	{
+//		print(n / 10);
+//	}
+//	printf("%d ", n % 10);
+//}
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	print(num);
+//	return 0;
+//}
+
+//int main()
+//{
+//	printf("hehe\n");
+//	main();	//自己调用自己，就是递归	容易栈溢出
+//	return 0;
+//}
+
+//#include "add.h"
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a, b);
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+//#include <string.h>
+//#include <math.h>
+
+//int main()
+//{
+//	printf("%d", printf("%d", printf("%d", 43)));
+//	return 0;
+//}
 
 //int main()
 //{
