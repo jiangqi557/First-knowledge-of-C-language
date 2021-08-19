@@ -65,7 +65,7 @@ int main()
 
 //最大公约数
 //辗转相除法，欧几里德算法
-/*https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/869308?fr=aladdin*/
+/* https://baike.baidu.com/item/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/869308?fr=aladdin */
 //int main()
 //{
 //	int m = 24;

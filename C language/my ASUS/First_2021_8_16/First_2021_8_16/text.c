@@ -2,44 +2,211 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
-void Swap1(int x, int y)
+int is_binary_scarch(int CharacterString[], int Lvalue, int RightValue, int parameter)
 {
-	int tmp = 0;
-	tmp = x;
-	x = y;
-	y = tmp;
+	int mid = 0;
+	while (Lvalue <= RightValue)
+	{
+		mid = (Lvalue + RightValue) / 2;
+		if (CharacterString[mid] < parameter)
+		{
+			Lvalue = mid + 1;
+		}
+		else if (CharacterString[mid] > parameter)
+		{
+			RightValue = mid - 1;
+		}
+		else
+			return mid;
+	}
+	if (Lvalue > RightValue)
+	{
+		return 0;
+	}
 }
-
-void Swap2(int* pa, int* pb)
-{
-	int* tmp = 0;
-	tmp = *pa;
-	*pa = *pb;
-	*pb = tmp;
-}
-
-//指针操作
-//int main()
-//{
-//	int a = 10;
-//	int* pa = &a;	//pa指针变量，需要取地址
-//	*pa=20;			//解引用操作
-//	printf("%d\n", a);
-//	return 0;
-//}
 
 int main()
 {
-	int a = 10;
-	int b = 20;
-	printf("正常输出	a = %d b = %d\n", a, b);
-	Swap1(a, b);
-	printf("非指针交换	a = %d b = %d\n", a, b);
-	Swap2(&a, &b);
-	printf("指针交换	a = %d b = %d\n", a,b);
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int left = 0;
+	int right = sizeof(arr) / sizeof(arr[0]) - 1;
+	printf("输入1-10的数字，自动判断这个数在这个数组中的下标: ");
+	int input = 0;
+	scanf("%d", &input);
+
+	int bs = is_binary_scarch(arr, left, right, input);
+	
+	if (bs == 0)
+	{
+		printf("没找到");
+	}
+	else
+	{
+		printf("%d\n", bs);
+	}
 	return 0;
 }
+
+//普通的二分查找算法
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;
+//
+//	int input = 7;
+//	int mid = 0;
+//	while (left <= right)
+//	{
+//		mid = (left + right) / 2;
+//		if (arr[mid] < input)
+//		{
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > input)
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//			break;
+//	}
+//	if (left <= right)
+//	{
+//		printf("%d\n", mid);
+//	}
+//	else
+//	{
+//		printf("没找到");
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int year = 0;
+//	int i = 0;
+//	for (year = 1000; year <= 2000; year++)
+//	{
+//		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+//		{
+//			printf("%d\n", year);
+//			i++;
+//		}
+//	}
+//	printf(" %d\n", i);
+//	return 0;
+//}
+
+//用函数判断是否是闰年
+//int is_leap_year(int y)
+//{
+//	if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
+//	{
+//		return 1;
+//	}
+//	else
+//	{ 
+//		return 0;
+//	}
+//}
+//
+//int main()
+//{
+//	int year = 0;
+//	int num = 0;
+//	for (year = 1000; year <= 2000; year++)
+//	{
+//		if(1 == is_leap_year(year))
+//		{
+//			printf("%d是闰年\n", year);
+//			num++;
+//		}
+//	}
+//	printf("%d\n", num);
+//	return 0;
+//}
+
+//int is_prime(int n)
+//{
+//	//产生2至n-1个数
+//	int j = 0;
+//	for (j = 2; j <= sqrt(n); j++)
+//	{
+//		if (n % j == 0)
+//			return 0;
+//	}
+//	return 1;
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	int b = 0;
+//there:
+//	printf("num1 = ");
+//	int num1 = 0;
+//	scanf("%d", &num1);
+//	printf("num2 = ");
+//	int num2 = 0;
+//	scanf("%d", &num2);
+//	if (num1 > num2)
+//	{
+//		goto there;
+//	}
+//	for (i = num1; i <= num2; i++)
+//	{
+//		//判断 i 是否为素数
+//		if (is_prime(i) == 1)
+//		{
+//			printf("%d\n", i);
+//			b++;
+//		}
+//	}
+//	printf("\n");
+//	printf("总共有%d个素数\n", b);
+//	return 0;
+//}
+
+//void Swap1(int x, int y)
+//{
+//	int tmp = 0;
+//	tmp = x;
+//	x = y;
+//	y = tmp;
+//}
+//
+//void Swap2(int *pa, int *pb)
+//{
+//	int* tmp = 0;
+//	tmp = *pa;
+//	*pa = *pb;
+//	*pb = tmp;
+//}
+//
+////指针操作
+////int main()
+////{
+////	int a = 10;
+////	int* pa = &a;	//pa指针变量，需要取地址
+////	*pa=20;			//解引用操作
+////	printf("%d\n", a);
+////	return 0;
+////}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	printf("正常输出	a = %d b = %d\n", a, b);
+//	Swap1(a, b);
+//	printf("非指针交换	a = %d b = %d\n", a, b);
+//	Swap2(&a, &b);
+//	printf("指针交换	a = %d b = %d\n", a,b);
+//	return 0;
+//}
 
 //定义函数名
 //int get_max(int x, int y)
