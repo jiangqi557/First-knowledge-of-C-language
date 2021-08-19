@@ -4,50 +4,82 @@
 #include <string.h>
 #include <math.h>
 
-int is_binary_scarch(int CharacterString[], int Lvalue, int RightValue, int parameter)
-{
-	int mid = 0;
-	while (Lvalue <= RightValue)
-	{
-		mid = (Lvalue + RightValue) / 2;
-		if (CharacterString[mid] < parameter)
-		{
-			Lvalue = mid + 1;
-		}
-		else if (CharacterString[mid] > parameter)
-		{
-			RightValue = mid - 1;
-		}
-		else
-			return mid;
-	}
-	if (Lvalue > RightValue)
-	{
-		return 0;
-	}
-}
-
 int main()
 {
-	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-	int left = 0;
-	int right = sizeof(arr) / sizeof(arr[0]) - 1;
-	printf("输入1-10的数字，自动判断这个数在这个数组中的下标: ");
-	int input = 0;
-	scanf("%d", &input);
-
-	int bs = is_binary_scarch(arr, left, right, input);
-	
-	if (bs == 0)
-	{
-		printf("没找到");
-	}
-	else
-	{
-		printf("%d\n", bs);
-	}
+	printf("%d", printf("%d", printf("%d", 43)));
 	return 0;
 }
+
+//int main()
+//{
+//	char arr[20] = "hello";
+//	int ret = strlen(strcat(arr, "bit"));
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//void new_line()
+//{
+//	printf("hehe\n");
+//}
+//void three_line()
+//{
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		new_line();
+//	}
+//}
+//int main()
+//{
+//	three_line();
+//	return 0;
+//}
+
+//int is_binary_scarch(int CharacterString[], int Lvalue, int RightValue, int parameter)
+//{
+//	int mid = 0;
+//	while (Lvalue <= RightValue)
+//	{
+//		mid = (Lvalue + RightValue) / 2;
+//		if (CharacterString[mid] < parameter)
+//		{
+//			Lvalue = mid + 1;
+//		}
+//		else if (CharacterString[mid] > parameter)
+//		{
+//			RightValue = mid - 1;
+//		}
+//		else
+//			return mid;
+//	}
+//	if (Lvalue > RightValue)
+//	{
+//		return 0;
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;
+//	printf("输入1-10的数字，自动判断这个数在这个数组中的下标: ");
+//	int input = 0;
+//	scanf("%d", &input);
+//
+//	int bs = is_binary_scarch(arr, left, right, input);
+//	
+//	if (bs == 0)
+//	{
+//		printf("没找到");
+//	}
+//	else
+//	{
+//		printf("%d\n", bs);
+//	}
+//	return 0;
+//}
 
 //普通的二分查找算法
 //int main()
