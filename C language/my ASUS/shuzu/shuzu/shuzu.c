@@ -3,22 +3,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main()
-{
-	int arr1[10] = { 0 };
-	printf("%d\n", sizeof(arr1));
-	printf("\n");
-	int arr[] = { 1,2,3,4,5,6,7 };
-	printf("%p\n", arr);		//第一个元素的地址
-	printf("%p\n", &arr[0]);	//第一个元素的地址
-	printf("%p\n", &arr);		//整个元素第一个的地址
-	printf("%d\n", *arr);		//数组第一个元素
-	printf("\n");
-	printf("%p\n", arr+1);
-	printf("%p\n", &arr[0]+1);
-	printf("%p\n", &arr+1);
-	return 0;
-}
+//int main()
+//{
+//	int arr1[10] = { 0 };
+//	printf("%d\n", sizeof(arr1));
+//	printf("\n");
+//	int arr[] = { 1,2,3,4,5,6,7 };
+//	printf("%p\n", arr);		//第一个元素的地址
+//	printf("%p\n", &arr[0]);	//第一个元素的地址
+//	printf("%p\n", &arr);		//整个元素第一个的地址
+//	printf("%d\n", *arr);		//数组第一个元素
+//	printf("\n");
+//	printf("%p\n", arr+1);
+//	printf("%p\n", &arr[0]+1);
+//	printf("%p\n", &arr+1);
+//	return 0;
+//}
 
 //冒泡排序
 //bubble_sort(int arr[], int sz)
